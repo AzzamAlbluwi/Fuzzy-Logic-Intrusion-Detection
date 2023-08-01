@@ -20,6 +20,7 @@ value = 1.5
 # Define the range of PCA components to try
 min_components = 1
 max_components = 8
+
 # Read the dataset from the CSV file named "UNSW_NB15.csv"
 dataset = read_csv_file("all")
 
