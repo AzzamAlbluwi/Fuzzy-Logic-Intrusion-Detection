@@ -12,6 +12,14 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import seaborn as sns
 
+number_data = 9000  # Replace this with the desired number of rows to select
+num_testing = 9000
+
+value = 1.5
+
+# Define the range of PCA components to try
+min_components = 1
+max_components = 8
 # Read the dataset from the CSV file named "UNSW_NB15.csv"
 dataset = read_csv_file("all")
 
