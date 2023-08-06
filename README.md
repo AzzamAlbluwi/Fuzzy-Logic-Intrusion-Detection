@@ -57,8 +57,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgments
 
-Special thanks to Dr. John Doe and the XYZ Research Lab for their support and guidance during this project.
+Special thanks to Dr. Liyth and Yousef Al-Suiwdan for their support and guidance during this project.
  
 ## Contact
 
-For any questions or feedback, please contact John Doe at john.doe@example.com.
+For any questions or feedback, please contact Me at AlbluwiAzzam@gmail.com
