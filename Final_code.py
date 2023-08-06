@@ -221,7 +221,6 @@ print(f"Precision: {precision:.4f}")
 print(f"Recall (True Positive Rate): {recall:.4f}")
 print(f"F-score: {f_score:.4f}")
 
-
 # Extract values from the best confusion matrix
 cm = confusion_matrix(true_labels, output_labels, labels=['Normal', 'Attack'])
 
@@ -236,4 +235,33 @@ sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['Normal', 'Attac
 plt.xlabel('Predicted Class')
 plt.ylabel('True Class')
 plt.title(f'Confusion Matrix\n Accuracy: {accuracy * 100:.2f}%')
+plt.show()
+
+# Plot Input Variable 1
+input_var_1.view()
+# Plot Input Variable 2
+input_var_2.view()
+# Plot Output Variable
+output_var.view()
+plt.show()
+
+# Create meshgrid for input variables
+x, y = np.meshgrid(input_var_1.universe, input_var_2.universe)
+z = np.zeros_like(x)
+
+# Calculate rule activation for each combination of input variables
+for i in range(len(x)):
+    for j in range(len(y)):
+        fuzzy_sim.input['input_var_1'] = x[i, j]
+        fuzzy_sim.input['input_var_2'] = y[i, j]
+        fuzzy_sim.compute()
+        z[i, j] = fuzzy_sim.output['output_var']
+
+# Plot the 3D rule activation surface
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(x, y, z)
+ax.set_xlabel('Input Variable 1')
+ax.set_ylabel('Input Variable 2')
+ax.set_zlabel('Output Variable')
 plt.show()
