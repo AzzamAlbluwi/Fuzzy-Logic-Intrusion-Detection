@@ -1,7 +1,5 @@
 # Fuzzy Logic-based Intrusion Detection System
 
-![Intrusion Detection System](images/intrusion_detection.jpg)
-
 ## Introduction
 
 This project implements a Fuzzy Logic-based Intrusion Detection System (IDS) to detect network intrusions in cybersecurity data. The IDS uses the k-means clustering algorithm for dimensionality reduction through Principal Component Analysis (PCA), and then applies Fuzzy Logic to classify network traffic as either "Normal" or "Attack." The system provides an accuracy evaluation and visualizes the results through heatmaps and evaluation metrics.
