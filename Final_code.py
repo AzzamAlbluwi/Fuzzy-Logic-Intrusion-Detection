@@ -1,5 +1,5 @@
 # Import necessary libraries
-from functions import read_csv_file, drop_col, save_data_to_csv, check_null_values, drop_columns, normalize_data, select_random_rows, split_train_test
+from functions import read_csv_file, check_null_values, drop_columns, select_random_rows
 import pandas as pd
 import numpy as np
 from sklearn.decomposition import PCA
@@ -246,22 +246,22 @@ output_var.view()
 plt.show()
 
 # Create meshgrid for input variables
-x, y = np.meshgrid(input_var_1.universe, input_var_2.universe)
-z = np.zeros_like(x)
+# x, y = np.meshgrid(input_var_1.universe, input_var_2.universe)
+# z = np.zeros_like(x)
 
-# Calculate rule activation for each combination of input variables
-for i in range(len(x)):
-    for j in range(len(y)):
-        fuzzy_sim.input['input_var_1'] = x[i, j]
-        fuzzy_sim.input['input_var_2'] = y[i, j]
-        fuzzy_sim.compute()
-        z[i, j] = fuzzy_sim.output['output_var']
+# # Calculate rule activation for each combination of input variables
+# for i in range(len(x)):
+#     for j in range(len(y)):
+#         fuzzy_sim.input['input_var_1'] = x[i, j]
+#         fuzzy_sim.input['input_var_2'] = y[i, j]
+#         fuzzy_sim.compute()
+#         z[i, j] = fuzzy_sim.output['output_var']
 
-# Plot the 3D rule activation surface
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-ax.plot_surface(x, y, z)
-ax.set_xlabel('Input Variable 1')
-ax.set_ylabel('Input Variable 2')
-ax.set_zlabel('Output Variable')
-plt.show()
+# # Plot the 3D rule activation surface
+# fig = plt.figure()
+# ax = fig.add_subplot(111, projection='3d')
+# ax.plot_surface(x, y, z)
+# ax.set_xlabel('Input Variable 1')
+# ax.set_ylabel('Input Variable 2')
+# ax.set_zlabel('Output Variable')
+# plt.show()
